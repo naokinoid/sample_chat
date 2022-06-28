@@ -1,0 +1,14 @@
+<h1>Rooms#show</h1>
+
+<div id = "messages">
+  <% if @messages.present? %>
+    <% @messages.each do | message | %>
+      <%= render "messages/message", message: message %>
+    <% end %>
+  <% end %>
+</div>
+
+<form>
+  <label>Say Something:</label><br>
+  <input type="text" data-behavior="room_speaker">
+</form>
